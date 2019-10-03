@@ -1,6 +1,10 @@
 language: ruby
 cache: bundler
 sudo: false
+services:
+  - postgresql
+addons:
+  mariadb: '10.0'
 env:
   global: 
     - JRUBY_OPTS=--2.0
