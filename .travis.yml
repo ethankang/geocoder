@@ -4,6 +4,7 @@ sudo: false
 
 services:
   - postgresql
+  - mysql
 before_script:
   - psql -c 'create database geocoder_test;' -U postgres
 addons:
