@@ -451,6 +451,19 @@ IP Address Lookups
 * **Limitations**: Only good for non-commercial use. For commercial usage please check http://developer.baidu.com/map/question.htm#qa0013
 * **Notes**: To use Baidu set `Geocoder.configure(lookup: :baidu_ip, api_key: "your_api_key")`.
 
+### Tencent IP (`:tencent_ip`)
+
+* **API key**: required
+* **Key signup**: http://lbs.qq.com/console/mykey.html
+* **Quota**: 10,000 free requests per day per key. 5 requests per second per key. For increased quota, one must first apply to become a corporate developer and then apply for increased quota.
+* **Region**: China
+* **SSL support**: yes
+* **Languages**: Chinese (Simplified)
+* **Documentation**: https://lbs.qq.com/webservice_v1/guide-ip.html
+* **Terms of Service**: http://lbs.qq.com/terms.html
+* **Limitations**: Only works for locations in Greater China (mainland China, Hong Kong, Macau, and Taiwan).
+* **Notes**: To use Tencent, set `Geocoder.configure(lookup: :tencent_ip, api_key: "your_api_key")`.
+
 ### MaxMind GeoIP2 Precision Web Services (`:maxmind_geoip2`)
 
 * **API key**: required

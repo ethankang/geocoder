@@ -14,10 +14,10 @@ module Geocoder::Result
     end
 
     # NOTE: The Tencent reverse geocoding API has the field named
-    # 'address_component' compared to 'address_components' in the 
+    # 'address_component' compared to 'address_components' in the
     # regular geocoding API.
     def province
-      @data['address_components'] and (@data['address_components']['province']) or 
+      @data['address_components'] and (@data['address_components']['province']) or
       (@data['address_component'] and @data['address_component']['province']) or
       ""
     end
@@ -25,25 +25,25 @@ module Geocoder::Result
     alias_method :state, :province
 
     def city
-      @data['address_components'] and (@data['address_components']['city']) or 
+      @data['address_components'] and (@data['address_components']['city']) or
       (@data['address_component'] and @data['address_component']['city']) or
       ""
     end
 
     def district
-      @data['address_components'] and (@data['address_components']['district']) or 
+      @data['address_components'] and (@data['address_components']['district']) or
       (@data['address_component'] and @data['address_component']['district']) or
       ""
     end
 
     def street
-      @data['address_components'] and (@data['address_components']['street']) or 
+      @data['address_components'] and (@data['address_components']['street']) or
       (@data['address_component'] and @data['address_component']['street']) or
       ""
     end
 
     def street_number
-      @data['address_components'] and (@data['address_components']['street_number']) or 
+      @data['address_components'] and (@data['address_components']['street_number']) or
       (@data['address_component'] and @data['address_component']['street_number']) or
       ""
     end
@@ -58,6 +58,10 @@ module Geocoder::Result
 
     def postal_code
       ""
+    end
+
+    def adcode
+      @data['ad_info']['adcode']
     end
 
     def country
